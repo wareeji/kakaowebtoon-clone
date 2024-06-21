@@ -12,7 +12,7 @@ export function NavCenterItemText({ address, menutext }) {
 export function NavCenterItemLogo ({ address, menuimg, }) {
     return (
         <Link href={address} className="cursor-pointer mx-[24px] ">
-            <Image src={menuimg}/>
+            <Image src={menuimg} alt="menuimg"/>
         </Link>
     )
 }

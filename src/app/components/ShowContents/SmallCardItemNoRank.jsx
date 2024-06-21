@@ -19,7 +19,7 @@ export default function SmallCardItemNoRank({ id, name, bgimage, chaimage, title
                     style={{ backgroundImage: `linear-gradient(180deg, ${color0} 0%, ${color1} 33.33%, ${color2} 66.67%, ${color3} 100%)` }}></div>
 
                 <div className="absolute z-3 top-0 left-1 mt-[4px] w-full flex flex-row  ">
-                    <Image src={clock} />
+                    <Image src={clock} alt="clock" />
                     <div className="bg-white h-[18px] rounded-r-[5px] px-[3px] flex justify-center items-center font-bold text-[10px]">3 ชม.</div>
                 </div>
 

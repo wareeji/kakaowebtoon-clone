@@ -70,6 +70,7 @@ export default function Page() {
                     <article className="mt-1 gap-[4px] grid grid-cols-3 grid-rows-2 sm:grid-cols-4 sm:grid-rows-2 ">
                         {selectSmallAll.map((one) => (
                             <SmallCardItemNoRank
+                                key={one.comic_id} // เพิ่ม key prop ด้วยค่าที่ไม่ซ้ำกัน เช่น comic_id
                                 id={one.comic_id}
                                 name={one.commic_name}
                                 bgimage={one.bg_img}

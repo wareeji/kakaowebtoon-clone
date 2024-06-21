@@ -31,10 +31,10 @@ export default function LargeCard({ id ,name, bgimage, chaimage, titleimage, sto
 
                         <div className="bg-[#ff3042] flex flex-row justify-between items-center rounded-[5px] w-[64px] h-[18px] px-[6px]">
                             <p className="text-[#ffffff] text-[12px] font-bold">1</p>
-                            <Image className="w-2" src={minus} />
+                            <Image className="w-2" src={minus} alt="minus" />
                         </div>
 
-                        <Image src={clock} />
+                        <Image src={clock} alt="clock" />
                     </div>
                 </div>
             </article >

@@ -27,7 +27,7 @@ export default function LargeCardNoRank({ id, name, bgimage, chaimage, titleimag
                     <div className="mt-[6px] text-[#ffffffb6] text-[12px] text-nowrap "> {storyby}, {picturesby} ,{originalby} </div>
 
                     <div className="flex flex-row mt-[12px]">
-                        <Image src={clock} />
+                        <Image src={clock} alt="clock" />
                         <div className="bg-white h-[18px] rounded-r-[5px] px-[3px] flex justify-center items-center font-bold text-[10px]">3 ชม.</div>
                     </div>
                 </div>
