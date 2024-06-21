@@ -6,11 +6,6 @@ import Header from '../components/Header/Header.jsx';
 
 
 export default function Page() {
-    if(!process.env.NEXT_PUBLIC_API_URL)
-        {
-            return null
-        }
-        
     //fantasy_romance
     const [getR, setGetR] = useState([])
     useEffect(() => {
@@ -44,7 +39,9 @@ export default function Page() {
 
     }, [getR, selectLargeR])
 
-
+    if (!process.env.NEXT_PUBLIC_API_URL) {
+        return <div>API URL is not defined</div>;
+    }
 
     return (
         <div> 

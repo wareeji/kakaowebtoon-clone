@@ -18,9 +18,8 @@ export async function getData(id) {
 
 
 export default async function Page({params}) {
-  if(!process.env.NEXT_PUBLIC_API_URL)
-  {
-     return null
+  if (!process.env.NEXT_PUBLIC_API_URL) {
+    return <div>API URL is not defined</div>;
   }
 
   const id = params.id

@@ -5,12 +5,7 @@ import { SmallCardItem, SmallCardItemCanHidden } from "./components/ShowContents
 import Header from './components/Header/Header';
 
 
-export default function Home() {
-  if(!process.env.NEXT_PUBLIC_API_URL)
-    {
-        return null
-    }
-    
+export default function Home() {   
   //realtime
   const [getAll, setGetAll] = useState([])
   useEffect(() => {
@@ -397,6 +392,9 @@ export default function Home() {
     selectRandomTwoCanHidden()
   }, [getDrama, selectLargeDrama, selectSmallDrama])
 
+  if (!process.env.NEXT_PUBLIC_API_URL) {
+    return <div>API URL is not defined</div>;
+  }
 
   return (
     <div>

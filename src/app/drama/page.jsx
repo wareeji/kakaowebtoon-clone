@@ -6,11 +6,6 @@ import Header from '../components/Header/Header.jsx';
 
 
 export default function Page() {
-    if(!process.env.NEXT_PUBLIC_API_URL)
-        {
-            return null
-        }
-        
     //drama
     const [getDrama, setGetDrama] = useState([])
     useEffect(() => {
@@ -43,7 +38,9 @@ export default function Page() {
         setSelectSmallDrama(randomData)
     }, [getDrama, selectLargeDrama])
 
-
+    if (!process.env.NEXT_PUBLIC_API_URL) {
+        return <div>API URL is not defined</div>;
+    }
 
     return (
         <div><Header />

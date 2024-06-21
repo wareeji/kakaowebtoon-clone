@@ -6,10 +6,6 @@ import Header from '../components/Header/Header';
 
 
 export default function Page() {
-    if(!process.env.NEXT_PUBLIC_API_URL)
-        {
-            return null
-        }
     //realtime
     const [getAll, setGetAll] = useState([])
     useEffect(() => {
@@ -42,7 +38,9 @@ export default function Page() {
 
     }, [getAll, selectLargestAll])
 
-
+    if (!process.env.NEXT_PUBLIC_API_URL) {
+        return <div>API URL is not defined</div>;
+    }
 
     return (
         <div>
